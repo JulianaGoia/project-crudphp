@@ -32,3 +32,18 @@
 /* .register-form {
     padding: 30px;
 } */
+
+.table {
+    color: #696969;
+}
+
+table thead tr {
+    font-size: 18px;
+}
+
+.table-w-40 {
+    width: 40%;
+}
+.table-w-10 {
+    width: 10%;
+}

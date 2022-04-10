@@ -4,10 +4,35 @@ include_once('../header-internal.php');
 
 <div class="container">
     
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Cadastrar
-    </button>
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <h4>Pedidos</h4>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Cadastrar
+        </button>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">CPF</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-w-40">Nome</td>
+                <td>CPF</td>
+                <td>E-mail</td>
+                <td class="table-w-10">
+                    <a href=""><img src="../assets/icons/edit.svg" alt=""></a>
+                    <a href=""><img src="../assets/icons/delete.svg" alt=""></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

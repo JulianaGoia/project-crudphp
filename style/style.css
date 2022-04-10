@@ -100,4 +100,5 @@ body::-webkit-scrollbar-thumb
     transform: translate(-50%, -50%);
     color: #ffffff;
     gap: 10px;
+    opacity: .6;
   }

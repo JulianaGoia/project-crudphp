@@ -4,7 +4,7 @@ include_once('header.php');
 
 <section class="">
     <div class="action-buttons d-flex flex-wrap">
-        <a href="">
+        <a href="./_clients/client-list.php">
             <lord-icon
                 src="https://cdn.lordicon.com/dklbhvrt.json"
                 trigger="hover"
@@ -14,7 +14,7 @@ include_once('header.php');
             </lord-icon>
             <p>CLIENTES</p>
         </a>
-        <a href="">
+        <a href="./_orders/order-list.php">
             <lord-icon
                 src="https://cdn.lordicon.com/ofqzcdla.json"
                 trigger="hover"
@@ -23,7 +23,7 @@ include_once('header.php');
             </lord-icon>
             <p>PEDIDOS</p>
         </a>
-        <a href="">
+        <a href="./_products/product-list.php">
             <lord-icon
                 src="https://cdn.lordicon.com/zwixqnmk.json"
                 trigger="hover"
@@ -32,7 +32,7 @@ include_once('header.php');
             </lord-icon>
             <p>PRODUTOS</p>
         </a>
-        <a href="">
+        <a href="./migration/">
             <lord-icon
                 src="https://cdn.lordicon.com/kzwbetjp.json"
                 trigger="hover"

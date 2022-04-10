@@ -1,7 +1,7 @@
 body {
     background-image: linear-gradient(to top, #4d44a3, #7b70bb, #a69dd2, #d2cde9, #ffffff);
     background-repeat: no-repeat; 
-    font-family: 'Outfit', sans-serif; 
+    font-family: 'Josefin Sans', sans-serif;
     height: 100vh;
 }
 
@@ -99,4 +99,5 @@ body::-webkit-scrollbar-thumb
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
+    gap: 10px;
   }

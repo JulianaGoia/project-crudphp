@@ -1,0 +1,34 @@
+.btn {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e9e9e9;
+    padding: 6px 20px;
+    color: #696969;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+    background-color: #5C52AB;
+    color: #ffffff;
+    border: 1px solid #e9e9e9;
+}
+
+.modal-content {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.27 );
+    backdrop-filter: blur(8px);
+    opacity: 1;
+}
+
+.fade {
+    backdrop-filter: blur(3px);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-header, .modal-footer {
+    padding: 1rem 2rem;
+}
+/* .register-form {
+    padding: 30px;
+} */

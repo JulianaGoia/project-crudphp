@@ -16,11 +16,11 @@
     <div class="container">
         <header class="d-flex flex-row align-items-center justify-content-between my-5">
             <div class="title">
-                <a href="#" onclick="backHome()">
+                <a href="#" onclick="backToHome()">
                     <p>CRUD project</p>
                 </a>
             </div>
-            <div class="title-language">
-                <p>PHP + MySQL</p>
+            <div>
+                <a href="#" onclick="backToHome()"><img class="return-icon" src="/assets/icons/return.png" alt="return"></a>
             </div>
         </header>

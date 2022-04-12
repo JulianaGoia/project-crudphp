@@ -47,3 +47,15 @@ table thead tr {
 .table-w-10 {
     width: 10%;
 }
+
+.download-dump {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.download-dump h3 {
+    font-weight: bold;
+    color: #584ea8;
+}

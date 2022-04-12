@@ -1,8 +1,9 @@
 
     <footer>
-        <div class="footer-content d-flex">
-            <p class="">project by Juliana Goia</p>
-            <a href="https://github.com/JulianaGoia"><img src="/assets/icons/github.svg" alt="github"></a>
+        <div class="footer-content">
+            <a href="https://github.com/JulianaGoia" class="d-flex align-items-center" target="_blank"><img src="/assets/icons/github.svg" alt="github">
+                <p class="m-0">project by Juliana Goia</p>
+            </a>
         </div>
     </footer>
 </div>

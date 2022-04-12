@@ -15,17 +15,17 @@ include_once('../header-internal.php');
     <table class="table table-hover">
         <thead>
             <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
-                <th scope="col">E-mail</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Valor Unitário</th>
+                <th scope="col">Código de Barras</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="table-w-40">Nome</td>
-                <td>CPF</td>
-                <td>E-mail</td>
+                <td class="table-w-40">produto xxx</td>
+                <td>R$ 10,00</td>
+                <td>4793743743539</td>
                 <td class="table-w-10">
                     <a href=""><img src="../assets/icons/edit.svg" alt=""></a>
                     <a href=""><img src="../assets/icons/delete.svg" alt=""></a>

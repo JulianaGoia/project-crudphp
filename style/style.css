@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb
  }
 
  .action-buttons {
-    padding: 50px 0;
+    padding: 100px 0;
     justify-content: space-between;
  }
 
@@ -91,6 +91,9 @@ body::-webkit-scrollbar-thumb
     text-decoration: none;
     font-weight: 600;
  }
+ .action-buttons a:hover {
+    color: #574DA8;
+ }
 
  /* FOOTER */
 .footer-content {
@@ -98,7 +101,14 @@ body::-webkit-scrollbar-thumb
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+.footer-content a {
     color: #ffffff;
     gap: 10px;
     opacity: .6;
+    text-decoration: none;
+  }
+.footer-content a:hover {
+    color: #ffffff;
+    opacity: .9;
   }

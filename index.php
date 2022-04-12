@@ -32,7 +32,7 @@ include_once('header.php');
             </lord-icon>
             <p>PRODUTOS</p>
         </a>
-        <a href="./migration/">
+        <a href="./migration/migration.php">
             <lord-icon
                 src="https://cdn.lordicon.com/kzwbetjp.json"
                 trigger="hover"

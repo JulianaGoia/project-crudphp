@@ -1,5 +1,6 @@
 <?php
 include_once('../header-internal.php');
+require_once('../database/connection.php');
 ?>
 
 <div class="container">
@@ -26,7 +27,36 @@ include_once('../header-internal.php');
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <?php
+                    $busca = $banco->query("select * from orders");
+                    if(!$busca) {
+                        // mensagem de erro ao tentar buscar os registros na tabela
+                        echo "<tr><td>Error na busca</td></tr>";
+                    } else {
+                        // mensagem quando não houver registros na tabela
+                        if ($busca->num_rows == 0) {
+                            echo "<tr><td>Nenhum registro encontrado</td></tr>";
+                        } else {
+                            // loop para printar todos registros dentro da tabela clients
+                            while ($registro = $busca->fetch_object()) {
+                                echo "
+                                <tr>
+                                    <td>$registro->numero_pedido</td>
+                                    <td>$registro->id_client</td>
+                                    <td>$registro->id_product</td>
+                                    <td>$registro->id_value</td>
+                                    <td>$registro->data_pedido</td>
+                                    <td>$registro->quantidade</td>
+                                    <td>$registro->total</td>
+                                    <td>ações</td>
+                                </tr>";
+                            }
+                        }
+                    }
+                ?>
+
+
+            <!-- <tr>
                 <td>1</td>
                 <td class="table-w-40">Nome</td>
                 <td>produto xxx</td>
@@ -38,7 +68,7 @@ include_once('../header-internal.php');
                     <a href=""><img src="../assets/icons/edit.svg" alt=""></a>
                     <a href=""><img src="../assets/icons/delete.svg" alt=""></a>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 

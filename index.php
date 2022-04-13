@@ -4,7 +4,7 @@ include_once('header.php');
 
 <section class="">
     <div class="action-buttons d-flex flex-wrap">
-        <a href="./_clients/client-list.php">
+        <a href="./_clients/client-read.php">
             <lord-icon
                 src="https://cdn.lordicon.com/dklbhvrt.json"
                 trigger="hover"

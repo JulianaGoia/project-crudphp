@@ -13,6 +13,7 @@
 <script src="/js/index.js"></script>
 
 <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+<script src="sweetalert2.all.min.js"></script>
 
 </body>
 </html>

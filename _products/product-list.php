@@ -1,5 +1,6 @@
 <?php
 include_once('../header-internal.php');
+require_once('../database/connection.php');
 ?>
 
 <div class="container">
@@ -22,7 +23,31 @@ include_once('../header-internal.php');
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <?php
+                    $busca = $banco->query("select * from products order by nome_produto");
+                    if(!$busca) {
+                        // mensagem de erro ao tentar buscar os registros na tabela
+                        echo "<tr><td>Error na busca</td></tr>";
+                    } else {
+                        // mensagem quando não houver registros na tabela
+                        if ($busca->num_rows == 0) {
+                            echo "<tr><td>Nenhum registro encontrado</td></tr>";
+                        } else {
+                            // loop para printar todos registros dentro da tabela clients
+                            while ($registro = $busca->fetch_object()) {
+                                echo "
+                                <tr>
+                                    <td>$registro->nome_produto</td>
+                                    <td>$registro->valor_unitario</td>
+                                    <td>$registro->cod_barras</td>
+                                    <td>ações</td>
+                                </tr>";
+                            }
+                        }
+                    }
+                ?>
+
+            <!-- <tr>
                 <td class="table-w-40">produto xxx</td>
                 <td>R$ 10,00</td>
                 <td>4793743743539</td>
@@ -30,7 +55,7 @@ include_once('../header-internal.php');
                     <a href=""><img src="../assets/icons/edit.svg" alt=""></a>
                     <a href=""><img src="../assets/icons/delete.svg" alt=""></a>
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 

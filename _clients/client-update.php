@@ -3,7 +3,6 @@ include_once('../header-internal.php');
 require_once('../database/connection.php');
 ?>
 
-
 <?php
 if ($_POST) {
         $nome = $_POST['nome'] ?? null;
@@ -25,7 +24,6 @@ if ($_POST) {
         }
     }
 ?>
-
 
 <style>
     <?php

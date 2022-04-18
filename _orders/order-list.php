@@ -28,6 +28,9 @@ require_once('../database/connection.php');
         </thead>
         <tbody>
             <?php
+                    // $q = select nome_cliente from clients c join orders d on c.nome_cliente = d.id_client;
+                    // $busca = $banco->query($q);
+
                     $busca = $banco->query("select * from orders");
                     if(!$busca) {
                         // mensagem de erro ao tentar buscar os registros na tabela
@@ -42,9 +45,9 @@ require_once('../database/connection.php');
                                 echo "
                                 <tr>
                                     <td>$registro->numero_pedido</td>
-                                    <td>$registro->id_client</td>
-                                    <td>$registro->id_product</td>
-                                    <td>$registro->id_value</td>
+                                    <td>$registro->cliente</td>
+                                    <td>$registro->produto</td>
+                                    <td>valor unid</td>
                                     <td>$registro->data_pedido</td>
                                     <td>$registro->quantidade</td>
                                     <td>$registro->total</td>

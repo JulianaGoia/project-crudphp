@@ -22,7 +22,7 @@ INSERT INTO clients values
 	id int not null auto_increment primary key,
     nome_produto varchar (250) not null,
     valor_unitario decimal (8,2) not null,
-    cod_barras varchar (11) not null unique key
+    cod_barras varchar (20) not null
 );
 
     INSERT INTO products values
@@ -34,29 +34,43 @@ INSERT INTO clients values
     (6, "Webcam", 197.00, "27997862317922945254"),
     (7, "Microfone Gamer", 432.35, "71573997667327145954");
 
+--     CREATE TABLE orders (
+-- 	numero_pedido int not null auto_increment primary key,
+--     id_client int not null,
+--     id_product int not null,
+--     id_value decimal (8,2) unique key,
+--     data_pedido datetime not null,
+--     quantidade int not null,
+--     total decimal (8,2)
+-- );
+
     CREATE TABLE orders (
-	numero_pedido int not null auto_increment primary key,
-    id_client int not null,
-    id_product int not null,
-    id_value decimal (8,2) unique key,
+	numero_pedido int not null primary key,
+    cliente int not null,
+    produto int not null,
+    quantidade int DEFAULT null,
     data_pedido datetime not null,
-    quantidade int not null,
-    total decimal (8,2)
+    total decimal (8,2) DEFAULT NULL,
+    
+    FOREIGN KEY(cliente) REFERENCES clients(id),
+    FOREIGN KEY(produto) REFERENCES products(id)
 );
 
 INSERT INTO orders values
-	(1, now(), 2, null),
-    (2, now(), 1, null),
-    (3, now(), 5, null),
-    (4, now(), 1, null),
-    (5, now(), 3, null),
-    (6, now(), 2, null),
-    (7, now(), 2, null);
+	(1, 2, 4, 2, now(), null),
+    (2, 5, 6, 1, now(), null),
+    (3, 1, 7, 1, now(), null),
+    (4, 3, 1, 3, now(), null),
+    (5, 6, 5, 2, now(), null),
+    (6, 4, 3, 1, now(), null),
+    (7, 7, 2, 2, now(), null);
 
-ALTER TABLE orders ADD COLUMN id_client INT AFTER numero_pedido;
-ALTER TABLE orders ADD COLUMN id_product INT AFTER id_client;
-ALTER TABLE orders ADD COLUMN id_value INT AFTER id_product;
+-- ALTER TABLE orders ADD COLUMN id_client INT AFTER numero_pedido;
+-- ALTER TABLE orders ADD COLUMN id_product INT AFTER id_client;
+-- ALTER TABLE orders ADD COLUMN id_value INT AFTER id_product;
 
-ALTER TABLE orders ADD foreign key (id_client) references clients (id);
-ALTER TABLE orders ADD foreign key (id_product) references products (id);
-ALTER TABLE orders ADD foreign key (id_value) references products (valor_unitario);
+-- ALTER TABLE orders ADD foreign key (id_client) references clients (id);
+-- ALTER TABLE orders ADD foreign key (id_product) references products (id);
+
+--  join duplo
+SELECT o.numero_pedido, c.nome_cliente, p.nome_produto, o.quantidade, o.data_pedido, o.total FROM orders o JOIN products p ON o.produto = p.id JOIN clients c ON o.cliente = c.id;

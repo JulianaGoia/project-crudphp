@@ -15,6 +15,7 @@ CREATE TABLE orders (
     quantidade INT NOT NULL
 );
 
+
 INSERT INTO orders values
 	(DEFAULT, 1, "Juliana", "19311033057", "juliana@email.com", now(), "19423297597549697118", "Teclado Mecânico", 140.90, 10),
     (DEFAULT, 2, "Flavio", "03753892025", "flavio@email.com", now(), "15648576671311849586", "Mouse sem fio", 68.51, 25),
